@@ -55,7 +55,7 @@ chmod +x ~/.docker/cli-plugins/docker-compose
 # Download docker-compose.yml
 mkdir ~/nodestatus
 cd ~/nodestatus
-wget https://raw.githubusercontent.com/cokemine/nodestatus/master/docker-compose.yml
+wget https://raw.githubusercontent.com/NiuStar/nodestatus-server/master/docker-compose.yml
 vim docker-compose.yml #修改环境变量相关配置
 docker compose up -d
 
