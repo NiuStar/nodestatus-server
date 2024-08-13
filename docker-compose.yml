@@ -1,7 +1,7 @@
 version: "3"
 services:
   nodestatus:
-    image: cokemine/nodestatus
+    image: 24802117/nodestatus-server:latest
     container_name: nodestatus
     restart: always
 
