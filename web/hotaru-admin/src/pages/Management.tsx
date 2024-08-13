@@ -96,7 +96,13 @@ const parseInstallationScript = (
   const protocol = document.location.protocol.replace('http', 'ws');
   const { host } = window.location;
   const dsn = `${protocol}//${username || 'USERNAME_YOU_SET'}:${password || 'PASSWORD_YOU_SET'}@${host}`;
-  return `wget -N https://raw.githubusercontent.com/cokemine/nodestatus-client-go/master/install.sh && bash install.sh --dsn ${dsn}`;
+  return `version: "3"
+services:
+  nodestatus:
+    image: 24802117/nodestatus-client:1.0.9
+    container_name: nodestatus-client
+    restart: always
+    command: ./bin/app --dsn ${dsn}`;
 };
 
 const Management: FC = () => {
